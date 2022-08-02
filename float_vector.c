@@ -54,9 +54,17 @@ bool _isFull(const FloatVector *vector){
 
 void append(const FloatVector *vector, float n){
     is(_isFull(vector)){
-        fprintf(stderr, "Error: TAD is full!");
+        fprintf(stderr, "Error: Array is full!");
         exit(EXIT_FAILURE);
-    }else{
-        vector->data[vector->size++] = n;
+    }
+        
+    vector->data[vector->size++] = n;
+}
+
+void print(const FloatVector *vector){
+    for(int i=0; i<vector->size; i++){
+        printf("%f ", *(vector->data+i));
     }
 }
+
+//Todo: implement Set() function (Edit value from array)
