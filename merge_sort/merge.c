@@ -34,12 +34,11 @@ void merge_sort_recursion(int a[], int l, int r){
 
 void merge_sorted_arrays(int a[], int l, int m, int r){
     // l variable defines the left portion of the array
-    //
 
     int left_length = m - l + 1;  // middle - left + 1 gives us the length of the left portion 
     int rigth_length = r - m; // right - middle gives us the length of the rigth portion
 
-    //Creating two temporary arrays to store the two portions of the array
+    // Creating two temporary arrays to store the two portions of the array
     int temp_left[left_length];
     int temp_right[rigth_length];
 
@@ -55,9 +54,7 @@ void merge_sorted_arrays(int a[], int l, int m, int r){
         temp_right[i] = a[m+i+1];
     }
     
-
-
-    //K will be the index of the array that we are sorting (the main one)
+    // K will be the index of the array that we are sorting (the main one)
     for(i=0, j=0, k=l; k<=r; k++){
 
         if((i<left_length) && (j>=rigth_length || temp_left[i] <= temp_right[j])){
