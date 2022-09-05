@@ -65,7 +65,7 @@ void printArray(int array[], int size){
  
 int main()
 {
-     int size = 500000;
+    int size = 500000;
     int arr[size];
     srand(time(NULL));
     for(int i=0; i<size-1; i++){

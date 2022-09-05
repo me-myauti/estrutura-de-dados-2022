@@ -2,10 +2,10 @@
 #include <time.h>
 
 void swap(int* a, int* b) 
-{ 
-    int t = *a; 
-    *a = *b; 
-    *b = t; 
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
 }
 
 int partition(int array[], int start, int end){
@@ -28,8 +28,8 @@ int partition(int array[], int start, int end){
 void quicksort(int array[], int start, int end){
     if(start < end){
         int pivot = partition(array, start, end);
-        quicksort(array, start, pivot-1); //Verifica a parte esquerda
-        quicksort(array, pivot+1, end); //Verifica a parte direita
+        quicksort(array, start, pivot-1); //Quicksort on the left portion
+        quicksort(array, pivot+1, end); //Quicksort on the right portion
     }
 }
 
@@ -57,6 +57,6 @@ int main(){
 
     printArray(array, size);
 
-    //printf ("It took me %d clicks (%f seconds).\n",t,((double)t)/CLOCKS_PER_SEC);
+    printf ("It took me %d clicks (%f seconds).\n",t,((double)t)/CLOCKS_PER_SEC);
     printf("\n\n");
 }
